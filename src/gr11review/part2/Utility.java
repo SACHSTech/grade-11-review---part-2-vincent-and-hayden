@@ -1,5 +1,4 @@
 package gr11review.part2;
-
 public class Utility{
   public static String zipZap(String str) {
     int intlength;
@@ -18,18 +17,23 @@ public class Utility{
   }
 
   public static int sumNumbers(String str){
-  int intlength;
-  intlength = str.length();
-  int intcounter;
-  int intanswer;
-  String stranswer;
-  for (intcounter = 0 ; intcounter < intlength ; intcounter++) {
-    if (Character.isDigit(intcounter)) {
-      stranswer = stranswer + str.CharAt(intcounter);
+    //Variable Declaration
+    int intlength;
+    intlength = str.length();
+    int intcounter;
+    int intanswer;
+    String stranswer;
+    stranswer = "";
+    //String Scanner
+    for (intcounter = 0 ; intcounter < intlength ; intcounter++) {
+      if (Character.isDigit(str.charAt(intcounter))) {
+        stranswer = stranswer + str.charAt(intcounter);
+      }
     }
-  }
-  intanswer = Integer.parseInt(stranswer);
-  return intanswer;
+    //System.out.println(stranswer);
+    //Convert and Return Answer
+    intanswer = Integer.parseInt(stranswer);
+    return intanswer;
   }
 }
 
