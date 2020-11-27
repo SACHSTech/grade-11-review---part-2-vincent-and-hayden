@@ -1,4 +1,6 @@
 package gr11review.part2;
+import java.io.*;
+
 public class Utility{
   public static String zipZap(String str) {
     int intlength;
@@ -37,3 +39,7 @@ public class Utility{
   }
 }
 
+public static String longestWord(String filenametxt) {
+  BufferedReader thefile = new BufferedReader(new FileReader(filenametxt+".txt"));
+  while (thefile.eof == false){}
+}
