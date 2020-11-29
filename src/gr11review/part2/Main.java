@@ -16,8 +16,8 @@ public class Main {
     //System.out.println(Arrays.toString(intanswers));
 
     boolean test;
-    int[] outer = {1, 2, 4, 4, 6};
-    int[] inner = {2, 4};
+    int[] outer = {1, 2, 4, 6};
+    int[] inner = {2, 3, 4};
     test = Utility.linearIn(outer, inner );
     System.out.println(test);
   }

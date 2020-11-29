@@ -108,19 +108,21 @@ public class Utility {
       //If outercounter still inside outer array
       if (intoutercounter <= intouterlength) {
         //If inner array number is smaller than outer
-        //move onto next
+        //set innercounter to innerlength to skip everything else
         if (outer[intoutercounter] > inner[intinnercounter]) {
-          intinnercounter++;
+          intinnercounter = intinnerlength;
+        //if match found add to confirmation and mover to next inner
         } else if (outer[intoutercounter] == inner[intinnercounter]) {
           intconfirmation++;
           intinnercounter++;
         }
       }
     }
+    //if all inner array numbers have a match
     if (intconfirmation == intinnerlength) {
       return true;
     } else { 
-      System.out.println(intoutercounter);
+      //System.out.println(intoutercounter);
       return false;
     }
   }
