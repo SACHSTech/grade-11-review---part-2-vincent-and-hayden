@@ -1,6 +1,7 @@
 package gr11review.part2;
 
 import java.io.*;
+import java.util.Arrays;
 
 public class Utility {
   public static String zipZap(String str) {
@@ -61,6 +62,19 @@ public class Utility {
 
     }
     return stranswer;
-
+  }
+  public static int[] tenRun(int[] nums) {
+  int intcounter;
+  int intlength;
+  int intprinter = 0;
+  intlength = nums.length;
+  for (intcounter = 0 ; intcounter < intlength ; intcounter++) {
+    if ((nums[intcounter] % 10) == 0) {
+      intprinter = nums[intcounter];
+    } else {
+      nums[intcounter] = intprinter;
+    }
+  }
+  return nums;
   }
 }
