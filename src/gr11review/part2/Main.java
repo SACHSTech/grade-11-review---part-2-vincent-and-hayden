@@ -1,12 +1,15 @@
 package gr11review.part2;
+
 import gr11review.part2.Utility.*;
+
 public class Main {
   public static void main(String[] args) {
-      //String str;
-      //str = Utility.zipZap("zzipC:Dzop");
-      //System.out.println(str);
+    // String str;
+    // str = Utility.zipZap("zzipC:Dzop");
+    // System.out.println(str);
 
-      //System.out.println(Utility.sumNumbers("a321c123xyz"));
-      System.out.println(Utility.longestWord(words.txt));
-    }
+    // System.out.println(Utility.sumNumbers("a321c123xyz"));
+    System.out.println(
+        Utility.longestWord("/home/runner/grade-11-review-part-2-vincent-and-hayden/src/gr11review/part2/words.txt"));
+  }
 }
