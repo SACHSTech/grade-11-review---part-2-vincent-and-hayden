@@ -41,5 +41,16 @@ public class Utility{
 
 public static String longestWord(String filenametxt) {
   BufferedReader thefile = new BufferedReader(new FileReader(filenametxt+".txt"));
-  while (thefile.eof == false){}
+  String strreader;
+  int intlength = 0;
+  int intlongest = 0;
+  String stranswer;
+  while (thefile.eof == false) {
+    strreader = thefine.nextLine();
+    intlength = strreader.length();
+    if (intlength > intlongest) {
+      strreader = stranswer;
+    }
+  }
+  return stranswer;
 }
