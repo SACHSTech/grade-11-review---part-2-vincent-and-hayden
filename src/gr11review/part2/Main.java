@@ -15,10 +15,11 @@ public class Main {
     //int[] intanswers = (Utility.tenRun(nums));
     //System.out.println(Arrays.toString(intanswers));
 
-    boolean test;
-    int[] outer = {1, 2, 4, 6};
-    int[] inner = {2, 3, 4};
-    test = Utility.linearIn(outer, inner );
-    System.out.println(test);
+    //boolean test;
+    //int[] outer = {1, 2, 4, 6};
+    //int[] inner = {2, 3, 4};
+    //test = Utility.linearIn(outer, inner );
+    //System.out.println(test);
+    Utility.pascalTri(7, 7);
   }
 }

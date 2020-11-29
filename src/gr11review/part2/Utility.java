@@ -131,18 +131,33 @@ public class Utility {
     int[][] intanswerarray = new int[i][j];
     int introwcounter;
     int intcoloumncounter;
+    try {
+      PrintWriter theout = new PrintWriter(new FileWriter("/home/runner/grade-11-review-part-2-vincent-and-hayden/src/gr11review/part2/pascal.txt"));
 
-    for (introwcounter = 0 ; introwcounter < i ; introwcounter++) {
-      intanswerarray[introwcounter][0] = 1;
-    }
-    for (intcoloumncounter = 0 ; intcoloumncounter < j ; incoloumncounter++) {
-      intanswerarray[0][intcoloumncounter] = 1;
-    }
-
-    for (introwcounter = 1 ; introwcounter < i ; introwcounter++) {
-      for (intcoloumncounter = 1 ; intcoloumncounter < j ; intcoloumncounter++) {
-        intanswerarray[introwcounter][intcoloumncounter] = intanswerarray[introwcounter - 1][intcoloumncounter] + intanswerarray[introwcounter]
+      for (introwcounter = 0 ; introwcounter < i ; introwcounter++) {
+        intanswerarray[introwcounter][0] = 1;
       }
+      for (intcoloumncounter = 0 ; intcoloumncounter < j ; intcoloumncounter++) {
+        intanswerarray[0][intcoloumncounter] = 1;
+      }
+
+      for (introwcounter = 1 ; introwcounter < i ; introwcounter++) {
+        for (intcoloumncounter = 1 ; intcoloumncounter < j ; intcoloumncounter++) {
+          intanswerarray[introwcounter][intcoloumncounter] = intanswerarray[introwcounter - 1][intcoloumncounter] + intanswerarray[introwcounter][intcoloumncounter - 1];
+        }
+      }
+
+      for (introwcounter = 0 ; introwcounter < i ; introwcounter++) {
+        for (intcoloumncounter = 0 ; intcoloumncounter < j ; intcoloumncounter++) {
+          theout.print(intanswerarray[introwcounter][intcoloumncounter] + ", ");
+        }
+        theout.println("");
+      }
+      theout.close();
+    } catch (IOException e) {
+
+      System.out.println("error");
+
     }
   }
 }
