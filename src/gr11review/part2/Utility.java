@@ -75,15 +75,21 @@ public class Utility {
     return stranswer;
   }
   public static int[] tenRun(int[] nums) {
-  
+    //Variable Declaration
     int intcounter;
     int intlength;
     int intprinter = 0;
     intlength = nums.length;
+    //loop to scan and change array
     for (intcounter = 0 ; intcounter < intlength ; intcounter++) {
+      //Check if number is divisible by 10
       if ((nums[intcounter] % 10) == 0) {
+        //set printer variable to current number
         intprinter = nums[intcounter];
+      } else if (intprinter == 0) {
+        //Do nothing if no multiples of 10 has been found yet
       } else {
+        //if number is not variable of 10 print using printer variable
         nums[intcounter] = intprinter;
       }
     }
@@ -128,32 +134,38 @@ public class Utility {
   }
 
   public static void pascalTri(int i, int j){
+    //Variable Declartion
     int[][] intanswerarray = new int[i][j];
     int introwcounter;
     int intcoloumncounter;
+    //Exception Handling
     try {
       PrintWriter theout = new PrintWriter(new FileWriter("/home/runner/grade-11-review-part-2-vincent-and-hayden/src/gr11review/part2/pascal.txt"));
-
+      //Printing 1 along left and top side to array(they are independant from variables)
       for (introwcounter = 0 ; introwcounter < i ; introwcounter++) {
         intanswerarray[introwcounter][0] = 1;
       }
       for (intcoloumncounter = 0 ; intcoloumncounter < j ; intcoloumncounter++) {
         intanswerarray[0][intcoloumncounter] = 1;
       }
-
+      //applying pascal pattern to other spaces in array
+      //directly left and directly above the number are the two numbers to add to create new numbers
+      //start at 1 for both row and coloumn in array since 0 row and coloumn already filled
       for (introwcounter = 1 ; introwcounter < i ; introwcounter++) {
         for (intcoloumncounter = 1 ; intcoloumncounter < j ; intcoloumncounter++) {
           intanswerarray[introwcounter][intcoloumncounter] = intanswerarray[introwcounter - 1][intcoloumncounter] + intanswerarray[introwcounter][intcoloumncounter - 1];
         }
       }
-
+      //Printing to text file
       for (introwcounter = 0 ; introwcounter < i ; introwcounter++) {
         for (intcoloumncounter = 0 ; intcoloumncounter < j ; intcoloumncounter++) {
           theout.print(intanswerarray[introwcounter][intcoloumncounter] + ", ");
         }
         theout.println("");
       }
+      //closing text file
       theout.close();
+    //If exception caught print out "error"
     } catch (IOException e) {
 
       System.out.println("error");
