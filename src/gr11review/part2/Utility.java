@@ -91,6 +91,7 @@ public class Utility {
   }
 
   public static boolean linearIn(int[] outer, int[] inner) {
+    //Variable Declaration
     int intinnercounter;
     int intoutercounter;
     intoutercounter = 0;
@@ -99,22 +100,28 @@ public class Utility {
     intinnerlength = inner.length;
     int intouterlength;
     intouterlength = outer.length;
-
-    for (intinnercounter = 0 ; intinnercounter < intinnerlength ; intinnercounter++) {
-      if (intoutercounter < intouterlength) {
+    //System.out.println(intouterlength);
+    //For loop until entire inner array has been checked
+    for (intinnercounter = 0 ; intinnercounter < intinnerlength ; intoutercounter++) {
+      //System.out.println(intoutercounter);
+      //System.out.println(intinnercounter);
+      //If outercounter still inside outer array
+      if (intoutercounter <= intouterlength) {
+        //If inner array number is smaller than outer
+        //move onto next
         if (outer[intoutercounter] > inner[intinnercounter]) {
-          return false;
+          intinnercounter++;
         } else if (outer[intoutercounter] == inner[intinnercounter]) {
           intconfirmation++;
-          intoutercounter++;
-        } else {
-          intoutercounter++;
+          intinnercounter++;
         }
       }
     }
-  if (intconfirmation == intinnerlength - 1) {
-    return true;
-  }
-  return false;
+    if (intconfirmation == intinnerlength) {
+      return true;
+    } else { 
+      System.out.println(intoutercounter);
+      return false;
+    }
   }
 }
