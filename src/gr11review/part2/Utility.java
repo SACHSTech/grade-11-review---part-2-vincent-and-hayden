@@ -3,13 +3,16 @@ package gr11review.part2;
 import java.io.*;
 import java.util.Arrays;
 
+//@author Vincent Hung
 public class Utility {
   public static String zipZap(String str) {
+    //Variable Declaration
     int intlength;
     intlength = str.length();
     int intcounter;
     String stranswer;
     stranswer = "";
+    //Z'x'P detection loop
     for (intcounter = 0; intcounter < intlength; intcounter++) {
       stranswer = stranswer + str.substring(intcounter, intcounter + 1);
       if (intcounter > 0) {
@@ -41,21 +44,29 @@ public class Utility {
   }
 
   public static String longestWord(String filenametxt) {
+    //Variable Declartion
     String strreader = "";
     int intlength = 0;
     int intlongest = 0;
     String stranswer = "";
+    //Exception Handling 
     try {
+      //File Reader Creation
       BufferedReader thefile = new BufferedReader(new FileReader(filenametxt));
+      //Run as long as EOF is not reached
+      //Also reads line at same time
       while ((strreader = thefile.readLine()) != null) {
         // System.out.println(strreader);
+        //Check current word length
         intlength = strreader.length();
+        //Compare and switch if longer
         if (intlength >= intlongest) {
           intlongest = intlength;
           stranswer = strreader;
         }
       }
-      thefile.close();
+    thefile.close();
+    //If Exception print error
     } catch (IOException e) {
 
       System.out.println("error");
@@ -64,17 +75,46 @@ public class Utility {
     return stranswer;
   }
   public static int[] tenRun(int[] nums) {
-  int intcounter;
-  int intlength;
-  int intprinter = 0;
-  intlength = nums.length;
-  for (intcounter = 0 ; intcounter < intlength ; intcounter++) {
-    if ((nums[intcounter] % 10) == 0) {
-      intprinter = nums[intcounter];
-    } else {
-      nums[intcounter] = intprinter;
+  
+    int intcounter;
+    int intlength;
+    int intprinter = 0;
+    intlength = nums.length;
+    for (intcounter = 0 ; intcounter < intlength ; intcounter++) {
+      if ((nums[intcounter] % 10) == 0) {
+        intprinter = nums[intcounter];
+      } else {
+        nums[intcounter] = intprinter;
+      }
     }
+   return nums;
   }
-  return nums;
+
+  public static boolean linearIn(int[] outer, int[] inner) {
+    int intinnercounter;
+    int intoutercounter;
+    intoutercounter = 0;
+    int intinnerlength;
+    int intconfirmation = 0;
+    intinnerlength = inner.length;
+    int intouterlength;
+    intouterlength = outer.length;
+
+    for (intinnercounter = 0 ; intinnercounter < intinnerlength ; intinnercounter++) {
+      if (intoutercounter < intouterlength) {
+        if (outer[intoutercounter] > inner[intinnercounter]) {
+          return false;
+        } else if (outer[intoutercounter] == inner[intinnercounter]) {
+          intconfirmation++;
+          intoutercounter++;
+        } else {
+          intoutercounter++;
+        }
+      }
+    }
+  if (intconfirmation == intinnerlength - 1) {
+    return true;
+  }
+  return false;
   }
 }
