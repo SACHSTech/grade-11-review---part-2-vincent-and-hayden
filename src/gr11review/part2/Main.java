@@ -16,8 +16,6 @@ public class Main{
       str = keyboard.readLine();
       intInput = Utility.sumNumbers(str);
       System.out.println(intInput);
-    }else if(strOption.equals("File IO 2")){
-      
     }
   }
 }

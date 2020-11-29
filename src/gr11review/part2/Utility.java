@@ -23,8 +23,4 @@ public class Utility{
     }
     return intSum;
   }
-  public static String alphaWord(String filenametxt){
-    strString = hi;
-    return strString;
-  }
 }
