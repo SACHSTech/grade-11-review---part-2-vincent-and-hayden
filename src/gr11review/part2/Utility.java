@@ -37,10 +37,8 @@ public class Utility{
     intanswer = Integer.parseInt(stranswer);
     return intanswer;
   }
-}
-
-public static String longestWord(String filenametxt) {
-  BufferedReader thefile = new BufferedReader(new FileReader(filenametxt+".txt"));
+  public static String longestWord(String filenametxt) {
+  BufferedReader thefile = new BufferedReader(new FileReader(filenametxt));
   String strreader;
   int intlength = 0;
   int intlongest = 0;
