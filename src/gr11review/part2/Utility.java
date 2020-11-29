@@ -3,8 +3,9 @@ package gr11review.part2;
 import java.io.*;
 import java.util.Arrays;
 
-//@author Vincent Hung
+//@author Vincent Hung & Hayden Chung
 public class Utility {
+  //@author Vincent Hung
   public static String zipZap(String str) {
     //Variable Declaration
     int intlength;
@@ -23,6 +24,7 @@ public class Utility {
     return stranswer;
   }
 
+  //@author Vincent Hung
   public static int sumNumbers(String str) {
     // Variable Declaration
     int intlength;
@@ -43,6 +45,7 @@ public class Utility {
     return intanswer;
   }
 
+  //@author Vincent Hung
   public static String longestWord(String filenametxt) {
     //Variable Declartion
     String strreader = "";
@@ -74,6 +77,8 @@ public class Utility {
     }
     return stranswer;
   }
+
+  //@author Vincent Hung
   public static int[] tenRun(int[] nums) {
     //Variable Declaration
     int intcounter;
@@ -96,6 +101,7 @@ public class Utility {
    return nums;
   }
 
+  //@author Vincent Hung
   public static boolean linearIn(int[] outer, int[] inner) {
     //Variable Declaration
     int intinnercounter;
@@ -133,6 +139,7 @@ public class Utility {
     }
   }
 
+  //@author Vincent Hung
   public static void pascalTri(int i, int j){
     //Variable Declartion
     int[][] intanswerarray = new int[i][j];
