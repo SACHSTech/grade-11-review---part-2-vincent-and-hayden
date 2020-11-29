@@ -126,4 +126,23 @@ public class Utility {
       return false;
     }
   }
+
+  public static void pascalTri(int i, int j){
+    int[][] intanswerarray = new int[i][j];
+    int introwcounter;
+    int intcoloumncounter;
+
+    for (introwcounter = 0 ; introwcounter < i ; introwcounter++) {
+      intanswerarray[introwcounter][0] = 1;
+    }
+    for (intcoloumncounter = 0 ; intcoloumncounter < j ; incoloumncounter++) {
+      intanswerarray[0][intcoloumncounter] = 1;
+    }
+
+    for (introwcounter = 1 ; introwcounter < i ; introwcounter++) {
+      for (intcoloumncounter = 1 ; intcoloumncounter < j ; intcoloumncounter++) {
+        intanswerarray[introwcounter][intcoloumncounter] = intanswerarray[introwcounter - 1][intcoloumncounter] + intanswerarray[introwcounter]
+      }
+    }
+  }
 }
