@@ -1,7 +1,7 @@
 package gr11review.part2;
 
 import java.io.*;
-import java.io.FileReader;
+import java.util.*;
 
 public class Utility{
   public static int sumNumbers(String str){
@@ -25,6 +25,11 @@ public class Utility{
   }
 
   public static String alphaWord(String filenametxt){
-    
+      BufferedReader FileText = new BufferedReader(new FileReader(filenametxt));
+      String strWord;
+      String strFinalWord;
+      int intCompare;
+      strWord = FileText.readLine();
+      strFinalWord = FileText.readLine();
   }
 }
