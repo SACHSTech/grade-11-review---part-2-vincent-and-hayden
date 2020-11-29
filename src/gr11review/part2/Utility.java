@@ -50,7 +50,7 @@ public class Utility {
       while ((strreader = thefile.readLine()) != null) {
         // System.out.println(strreader);
         intlength = strreader.length();
-        if (intlength > intlongest) {
+        if (intlength >= intlongest) {
           intlongest = intlength;
           stranswer = strreader;
         }
