@@ -25,27 +25,6 @@ public class Utility {
   }
 
   //@author Vincent Hung
-  public static int sumNumbers(String str) {
-    // Variable Declaration
-    int intlength;
-    intlength = str.length();
-    int intcounter;
-    int intanswer;
-    String stranswer;
-    stranswer = "";
-    // String Scanner
-    for (intcounter = 0; intcounter < intlength; intcounter++) {
-      if (Character.isDigit(str.charAt(intcounter))) {
-        stranswer = stranswer + str.charAt(intcounter);
-      }
-    }
-    // System.out.println(stranswer);
-    // Convert and Return Answer
-    intanswer = Integer.parseInt(stranswer);
-    return intanswer;
-  }
-
-  //@author Vincent Hung
   public static String longestWord(String filenametxt) {
     //Variable Declartion
     String strreader = "";
