@@ -32,7 +32,7 @@ public class Utility{
       strWord = FileText.readLine();
       strFinalWord = FileText.readLine();
       while(strWord != null){
-        intCompare = strFinalWord.compareTo(strWord);
+        intCompare = strFinalWord.compareToIgnoreCase(strWord);
         if(intCompare > 0){
           strFinalWord = strWord;
         }
