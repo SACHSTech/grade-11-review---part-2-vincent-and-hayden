@@ -45,7 +45,10 @@ public class Utility{
     int intCount = 0;
     while(intCount < nums.length){
       intCount++;
-      if(intCount > 0 && intCount < nums.length)
+      if(intCount > 0 && intCount < nums.length - 1 && nums[intCount] == int value){
+      }else if(nums[intCount] != nums[intCount-1] && nums[intCount] !=nums[intCount+1]){
+        
+      }
     }
   }
 }
