@@ -17,9 +17,8 @@ public class Main{
       intInput = Utility.sumNumbers(str);
       System.out.println(intInput);
     }else if(strOption.equals("File IO 2")){
-      String filenametxt;
-      filenametxt = keyboard.readLine();
-      System.out.println(filenametxt);
+      String strFinalName = Utility.alphaWord(filenametxt);
+      System.out.println("First word based on alphabetical order: "+strFinalName);
     }
   }
 }

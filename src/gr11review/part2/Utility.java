@@ -28,8 +28,21 @@ public class Utility{
       BufferedReader FileText = new BufferedReader(new FileReader(filenametxt));
       String strWord;
       String strFinalWord;
+      boolean condition = true;
       int intCompare;
       strWord = FileText.readLine();
       strFinalWord = FileText.readLine();
+      while(condition){
+        intCompare = strFinalWord.compareTo(strWord);
+        if(intCompare > 0){
+          strFinalWord = strWord;
+        }
+        strWord = FileText.readLine();
+        if(strWord.isEmpty()){
+          conditon = false;
+        }
+      }
+    FileText.close();
+    return strFinalWord;
   }
 }
