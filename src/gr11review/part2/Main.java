@@ -22,11 +22,13 @@ public class Main{
       String strFinalName = Utility.alphaWord(filenametxt);
       System.out.println("First word based on alphabetical order: "+strFinalName);
     }else if(strOption.equals("Array 2")){
-      int[] nums = {2, 3, 4, 5};
+      int[] nums = {1, 0, 2, 1, 2};
       System.out.println("Enter number to change");
       int Value = Integer.parseInt(keyboard.readLine());
       Utility.notAlone(nums, Value);
       System.out.println("The Changed Array is: "+Arrays.toString(nums));
+    }else if(strOption.equals("Array 4")){
+      
     }
   }
 }

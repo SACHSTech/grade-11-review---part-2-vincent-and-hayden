@@ -52,4 +52,7 @@ public class Utility{
     }
     return nums;
   }
+  public static boolean canBalance(int[] nums)throws IOException{
+    
+  }
 }
