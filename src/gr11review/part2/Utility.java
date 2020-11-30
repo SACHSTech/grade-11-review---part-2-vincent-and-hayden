@@ -41,12 +41,12 @@ public class Utility{
     FileText.close();
     return strFinalWord;
   }
-  public int[] notAlone(int[] nums, int value)throws IOException{
+  public static int[] notAlone(int[] nums, int value)throws IOException{
     int intCount = 0;
     while(intCount < nums.length){
       intCount++;
       if(intCount > 0 && intCount < nums.length - 1 && nums[intCount] == value){
-      }else if(nums[intCount] != nums[intCount-1] && nums[intCount] !=nums[intCount+1]){
+      if(nums[intCount] != nums[intCount-1] && nums[intCount] !=nums[intCount+1])
         nums[intCount] = Math.max(nums[intCount-1], nums[intCount+1]);
       }
     }

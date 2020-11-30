@@ -3,6 +3,7 @@ package gr11review.part2;
 import java.io.*;
 import gr11review.part2.Utility.*;
 import java.util.*;
+import java.util.Arrays;
 
 public class Main{
   public static void main(String[] args) throws IOException{
@@ -21,9 +22,11 @@ public class Main{
       String strFinalName = Utility.alphaWord(filenametxt);
       System.out.println("First word based on alphabetical order: "+strFinalName);
     }else if(strOption.equals("Array 2")){
-      System.out.println("How many numbers do you want to add");
-      int intOption = Integer.parseInt(keyboard.readLine());
-      int
+      int[] nums = {2, 3, 4, 5};
+      System.out.println("Enter number to change");
+      int Value = Integer.parseInt(keyboard.readLine());
+      Utility.notAlone(nums, Value);
+      System.out.println("The Changed Array is: "+Arrays.toString(nums));
     }
   }
 }
