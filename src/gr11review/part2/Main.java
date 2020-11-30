@@ -20,6 +20,10 @@ public class Main{
     }else if(strOption.equals("File IO 2")){
       String strFinalName = Utility.alphaWord(filenametxt);
       System.out.println("First word based on alphabetical order: "+strFinalName);
+    }else if(strOption.equals("Array 2")){
+      System.out.println("How many numbers do you want to add");
+      int intOption = Integer.parseInt(keyboard.readLine());
+      int
     }
   }
 }

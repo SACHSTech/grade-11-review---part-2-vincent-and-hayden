@@ -45,10 +45,11 @@ public class Utility{
     int intCount = 0;
     while(intCount < nums.length){
       intCount++;
-      if(intCount > 0 && intCount < nums.length - 1 && nums[intCount] == int value){
+      if(intCount > 0 && intCount < nums.length - 1 && nums[intCount] == value){
       }else if(nums[intCount] != nums[intCount-1] && nums[intCount] !=nums[intCount+1]){
-        
+        nums[intCount] = Math.max(nums[intCount-1], nums[intCount+1]);
       }
     }
+    return nums;
   }
 }
