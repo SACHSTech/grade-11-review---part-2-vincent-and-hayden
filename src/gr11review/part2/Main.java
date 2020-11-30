@@ -7,6 +7,8 @@ import java.util.*;
 public class Main{
   public static void main(String[] args) throws IOException{
     BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
+    String filenametxt = "src/gr11review/part2/words.txt";
+    String alphaWord = "";
     System.out.println("Which Program do you want to run");
     String strOption = keyboard.readLine();
     if(strOption.equals("Method 2")){

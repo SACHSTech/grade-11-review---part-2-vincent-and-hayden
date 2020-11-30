@@ -24,25 +24,21 @@ public class Utility{
     return intSum;
   }
 
-  public static String alphaWord(String filenametxt){
+  public static String alphaWord(String filenametxt)throws IOException{
       BufferedReader FileText = new BufferedReader(new FileReader(filenametxt));
       String strWord;
       String strFinalWord;
-      boolean condition = true;
       int intCompare;
       strWord = FileText.readLine();
       strFinalWord = FileText.readLine();
-      while(condition){
+      while(strWord != null){
         intCompare = strFinalWord.compareTo(strWord);
         if(intCompare > 0){
           strFinalWord = strWord;
         }
         strWord = FileText.readLine();
-        if(strWord.isEmpty()){
-          conditon = false;
-        }
       }
-    FileText.close();
-    return strFinalWord;
-  }
+      FileText.close();
+      return strFinalWord;
+    }
 }
