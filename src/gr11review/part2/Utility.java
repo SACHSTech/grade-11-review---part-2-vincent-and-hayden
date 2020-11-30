@@ -25,20 +25,27 @@ public class Utility{
   }
 
   public static String alphaWord(String filenametxt)throws IOException{
-      BufferedReader FileText = new BufferedReader(new FileReader(filenametxt));
-      String strWord;
-      String strFinalWord;
-      int intCompare;
-      strWord = FileText.readLine();
-      strFinalWord = FileText.readLine();
-      while(strWord != null){
-        intCompare = strFinalWord.compareToIgnoreCase(strWord);
-        if(intCompare > 0){
-          strFinalWord = strWord;
-        }
-        strWord = FileText.readLine();
+    BufferedReader FileText = new BufferedReader(new FileReader(filenametxt));
+    String strWord;
+    String strFinalWord;
+    int intCompare;
+    strWord = FileText.readLine();
+    strFinalWord = FileText.readLine();
+    while(strWord != null){
+      intCompare = strFinalWord.compareToIgnoreCase(strWord);
+      if(intCompare > 0){
+        strFinalWord = strWord;
       }
-      FileText.close();
-      return strFinalWord;
+      strWord = FileText.readLine();
+      }
+    FileText.close();
+    return strFinalWord;
+  }
+  public int[] notAlone(int[] nums, int value)throws IOException{
+    int intCount = 0;
+    while(intCount < nums.length){
+      intCount++;
+      if(intCount > 0 && intCount < nums.length)
     }
+  }
 }
