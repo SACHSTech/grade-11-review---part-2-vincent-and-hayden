@@ -75,7 +75,7 @@ public class Main {
     str = Utility.zipZap("zzipC:Dzop");
     System.out.println(str);
     //Testing longestWord
-    System.out.println(Utility.longestWord("/home/runner/grade-11-review-part-2-vincent-and-hayden/src/gr11review/part2/words.txt"));
+    System.out.println(Utility.longestWord("src/gr11review/part2/words.txt"));
     
     //Testing tenRun
     int[] nums = {2,10,3,4,20};
