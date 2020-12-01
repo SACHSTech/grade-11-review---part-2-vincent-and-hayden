@@ -31,6 +31,10 @@ public class Main{
       int[] nums = {10,10};
       boolean Condition = Utility.canBalance(nums);   
       System.out.println(Condition);  
+    }else if(strOption.equals("Array 6")){
+      int n = Integer.parseInt(keyboard.readLine());
+      int intValue = Utility.diagonal(n);
+      System.out.println(intValue);
     }
   }
 }

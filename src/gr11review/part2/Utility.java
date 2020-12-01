@@ -72,11 +72,25 @@ public class Utility{
     return true;
   }
   public static void diagonal(int n){
-    FileWriter theWriter = new FileWriter("src/gr11Review/part2/diagonalOut.txt");
-    int intCount;
-    int intCount1;
+    PrintWriter theWriter = = new PrintWriter(new FileWriter("/home/runner/grade-11-review-part-2-vincent-and-hayden/src/gr11review/part2/diagonolOut.txt"));
+    int intCount = 0;
+    int intCount1 = 0;
     int[][] intArray;
-    intArray = new Int[n][n];
-
+    intArray = new int[n][n];
+    while(intCount < n && intCount1 < n){
+      intCount++;
+      intCount1++;
+      if(intCount < n - intCount - 1){
+        intArray[intCount][intCount1] = "0,";
+      }else if(intCount2 == n - intCount - 1 && intCount == 1){
+        intArray[intCount][intCount1] = "1";
+      }else if(intCount2 == n - intCount - 1){
+        intArray[intCount][intCount1] = "1,";
+      }else if(intCount2 > n - intCount - 1){
+        intArray[intCount][intCount1] = "2,";
+      }
+    }
+    theWriter.print(intArray[intCount][intCount2]);
+    theWriter.close();
   }
 }
