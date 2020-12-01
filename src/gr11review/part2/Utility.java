@@ -1,6 +1,6 @@
 package gr11review.part2;
 
-import java.io. * ;
+import java.io.*;
 import java.util.Arrays;
 
 //@author Vincent Hung & Hayden Chung
