@@ -3,9 +3,18 @@ package gr11review.part2;
 import gr11review.part2.Utility.*;
 import java.util.Arrays;
 
+/**
+* Grade 11 Review Part 2 Assignment
+* @author: Vincent Hung
+*
+*/
+
 public class Main {
   public static void main(String[] args) {
-    //@author Vincent Hung
+    /**
+    * Testing of methods
+    * @author: Vincent Hung
+    */  
     //Testing ZipZap
     String str;
     str = Utility.zipZap("zzipC:Dzop");

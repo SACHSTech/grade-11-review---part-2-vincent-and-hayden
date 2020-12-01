@@ -3,9 +3,12 @@ package gr11review.part2;
 import java.io.*;
 import java.util.Arrays;
 
-//@author Vincent Hung & Hayden Chung
+/**
+* ZipZap method 
+* remove inner character for any Z''P
+* @author: Vincent Hung
+*/ 
 public class Utility {
-  //@author Vincent Hung
   public static String zipZap(String str) {
     //Variable Declaration
     int intlength;
@@ -22,8 +25,11 @@ public class Utility {
     }
     return stranswer;
   }
-
-  //@author Vincent Hung
+  /**
+  * longestword method 
+  * scans text file for longest word and returns word
+  * @author: Vincent Hung
+  */ 
   public static String longestWord(String filenametxt) {
     //Variable Declartion
     String strreader = "";
@@ -55,8 +61,11 @@ public class Utility {
     }
     return stranswer;
   }
-
-  //@author Vincent Hung
+  /**
+  * tenRun method
+  * For each multiple of 10 in the given array, change all the values following it to be that multiple of 10, until encountering another multiple of 10
+  * @author: Vincent Hung
+  */ 
   public static int[] tenRun(int[] nums) {
     //Variable Declaration
     int intcounter;
@@ -78,8 +87,11 @@ public class Utility {
     }
     return nums;
   }
-
-  //@author Vincent Hung
+  /**
+  * linearIn method
+  * Given two arrays of ints sorted in increasing order, outer and inner, return true if all of the numbers in inner appear in outer
+  * @author: Vincent Hung
+  */ 
   public static boolean linearIn(int[] outer, int[] inner) {
     //Variable Declaration
     int intinnercounter;
@@ -116,8 +128,12 @@ public class Utility {
       return false;
     }
   }
-
-  //@author Vincent Hung
+  /**
+  * pascalTri method
+  * Based on given dimension of array print out numbers of pascal triangle 
+  * top left is the top of the pyramid
+  * @author: Vincent Hung
+  */ 
   public static void pascalTri(int i, int j) {
     //Variable Declartion
     int[][] intanswerarray = new int[i][j];
@@ -144,7 +160,6 @@ public class Utility {
       //Printing to text file
       for (introwcounter = 0; introwcounter < i; introwcounter++) {
         for (intcoloumncounter = 0; intcoloumncounter < j; intcoloumncounter++) {
-
           theout.print(intanswerarray[introwcounter][intcoloumncounter] + ",");
         }
         theout.println("");
