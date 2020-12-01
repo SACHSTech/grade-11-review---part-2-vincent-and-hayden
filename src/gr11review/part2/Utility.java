@@ -5,7 +5,12 @@ import java.util.*;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
-// Method 2: Add numbers together
+
+/** 
+* Method 2: Add numbers together
+* @author: H. Chung
+*
+*/
 public class Utility {
   public static int sumNumbers(String str) {
     // Setting Variables
@@ -33,7 +38,11 @@ public class Utility {
     // return sum
     return intSum;
   }
-// File IO 2: Reading words in file and picking the first alphabetically first word
+  /** 
+  * File IO 2: Reading words in file and picking the first alphabetically first word
+  * @author: H. Chung
+  *
+  */
   public static String alphaWord (String filenametxt) throws IOException {
     BufferedReader FileText = new BufferedReader(new FileReader(filenametxt));
     // Setting Variables and Reading File
@@ -55,7 +64,11 @@ public class Utility {
     FileText.close();
     return strFinalWord;
   }
-  // Array 2: Print out numbers in array
+  /** 
+  * Array 2: Print out numbers in array
+  * @author: H. Chung
+  *
+  */
   public static int[] notAlone(int[] nums, int value) throws IOException {
     // Setting Variables
     int intCount = 0;
@@ -72,7 +85,11 @@ public class Utility {
     // return new array
     return nums;
   }
-  // Array 4: Whether or not the numbers are balanced, print true or false
+  /** 
+  * Array 4: Whether or not the numbers are balanced, print true or false
+  * @author: H. Chung
+  *
+  */
   public static boolean canBalance(int[] nums) throws IOException {
     // Setting Variables
     int intLeftSum = 0;
@@ -95,7 +112,11 @@ public class Utility {
     }
     return true;
   }
-  // Array 6: Printing out numbers in a diagonal line
+  /** 
+  * Array 6: Printing out numbers in a diagonal line
+  * @author: H. Chung
+  *
+  */
   public static void diagonal(int n) throws IOException {
     // Setting variables and arrays
     int intCount = 0;
