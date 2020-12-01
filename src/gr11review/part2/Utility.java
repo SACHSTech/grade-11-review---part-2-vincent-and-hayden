@@ -2,6 +2,7 @@ package gr11review.part2;
 
 import java.io.*;
 import java.util.*;
+import java.io.FileWriter;
 
 public class Utility{
   public static int sumNumbers(String str){
@@ -69,5 +70,13 @@ public class Utility{
       }
     }
     return true;
+  }
+  public static void diagonal(int n){
+    FileWriter theWriter = new FileWriter("src/gr11Review/part2/diagonalOut.txt");
+    int intCount;
+    int intCount1;
+    int[][] intArray;
+    intArray = new Int[n][n];
+
   }
 }
