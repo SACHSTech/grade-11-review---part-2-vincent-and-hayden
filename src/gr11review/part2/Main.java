@@ -22,12 +22,21 @@ public class Main {
       String strFinalName = Utility.alphaWord(filenametxt);
       System.out.println("First word based on alphabetical order: "+strFinalName);
     } else if(strOption.equals("Array 2")) {
-      int[] nums = {1, 0, 2, 1, 2};
+      System.out.println("Amount of numbers in Array");
+      int intOption2 = Integer.parseInt(keyboard.readLine());
+      int[] nums = new int[intOption2];
+      int intCount = 0;
+      while(intCount < intOption2){
+        System.out.println("Enter the number: ");
+        nums[intCount] = Integer.parseInt(keyboard.readLine());
+        intCount++;
+      }
       System.out.println("Enter number to change");
       int Value = Integer.parseInt(keyboard.readLine());
       Utility.notAlone(nums, Value);
-      System.out.println("The Changed Array is: "+Arrays.toString(nums));
+      System.out.println("The Changed Array is: " + Arrays.toString(nums));
     } else if(strOption.equals("Array 4")) {
+      
       int[] nums = {10, 10};
       boolean Condition = Utility.canBalance(nums);   
       System.out.println(Condition);  
