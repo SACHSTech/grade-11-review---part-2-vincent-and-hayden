@@ -28,7 +28,9 @@ public class Main{
       Utility.notAlone(nums, Value);
       System.out.println("The Changed Array is: "+Arrays.toString(nums));
     }else if(strOption.equals("Array 4")){
-      
+      int[] nums = {10,10};
+      boolean Condition = Utility.canBalance(nums);   
+      System.out.println(Condition);  
     }
   }
 }

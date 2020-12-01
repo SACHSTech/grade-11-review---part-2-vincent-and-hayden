@@ -53,6 +53,21 @@ public class Utility{
     return nums;
   }
   public static boolean canBalance(int[] nums)throws IOException{
-    
+    int intLeftSum = 0;
+    int intCount = 0;
+    while(intCount < nums.length){
+      intLeftSum += nums[intCount];
+      intCount++;
+      int intRightSum = 0;
+      int intCount2 = nums.length-1;
+      while(intCount2 > intCount){
+        intCount2--;
+        intRightSum += nums[intCount2];
+      }
+      if(intRightSum == intLeftSum){
+        return false;
+      }
+    }
+    return true;
   }
 }
