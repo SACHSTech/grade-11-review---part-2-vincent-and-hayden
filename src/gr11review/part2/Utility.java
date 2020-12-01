@@ -292,7 +292,7 @@ public class Utility {
     int intcoloumncounter;
     //Exception Handling
     try {
-      PrintWriter theout = new PrintWriter(new FileWriter("/home/runner/grade-11-review-part-2-vincent-and-hayden/src/gr11review/part2/pascal.txt"));
+      PrintWriter theout = new PrintWriter(new FileWriter("src/gr11review/part2/pascal.txt"));
       //Printing 1 along left and top side to array(they are independant from variables)
       for (introwcounter = 0; introwcounter < i; introwcounter++) {
         intanswerarray[introwcounter][0] = 1;
