@@ -72,7 +72,7 @@ public class Utility{
     return true;
   }
   public static void diagonal(int n){
-    PrintWriter theWriter = = new PrintWriter(new FileWriter("/home/runner/grade-11-review-part-2-vincent-and-hayden/src/gr11review/part2/diagonolOut.txt"));
+    PrintWriter theWriter = new PrintWriter(new FileWriter("/home/runner/grade-11-review-part-2-vincent-and-hayden/src/gr11review/part2/diagonolOut.txt"));
     int intCount = 0;
     int intCount1 = 0;
     int[][] intArray;
@@ -80,13 +80,13 @@ public class Utility{
     while(intCount < n && intCount1 < n){
       intCount++;
       intCount1++;
-      if(intCount < n - intCount - 1){
+      if(intCount1 < n - intCount - 1){
         intArray[intCount][intCount1] = "0,";
-      }else if(intCount2 == n - intCount - 1 && intCount == 1){
+      }else if(intCount1 == n - intCount - 1 && intCount == 1){
         intArray[intCount][intCount1] = "1";
-      }else if(intCount2 == n - intCount - 1){
+      }else if(intCount1 == n - intCount - 1){
         intArray[intCount][intCount1] = "1,";
-      }else if(intCount2 > n - intCount - 1){
+      }else if(intCount1 > n - intCount - 1){
         intArray[intCount][intCount1] = "2,";
       }
     }
