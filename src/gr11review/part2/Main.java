@@ -32,9 +32,9 @@ public class Main{
       boolean Condition = Utility.canBalance(nums);   
       System.out.println(Condition);  
     }else if(strOption.equals("Array 6")){
+      System.out.println("Pick a number");
       int n = Integer.parseInt(keyboard.readLine());
-      int intValue = Utility.diagonal(n);
-      System.out.println(intValue);
+      Utility.diagonal(n);
     }
   }
 }

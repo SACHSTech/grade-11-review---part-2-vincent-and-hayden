@@ -3,6 +3,7 @@ package gr11review.part2;
 import java.io.*;
 import java.util.*;
 import java.io.FileWriter;
+import java.io.PrintWriter;
 
 public class Utility{
   public static int sumNumbers(String str){
@@ -71,26 +72,30 @@ public class Utility{
     }
     return true;
   }
-  public static void diagonal(int n){
-    PrintWriter theWriter = new PrintWriter(new FileWriter("/home/runner/grade-11-review-part-2-vincent-and-hayden/src/gr11review/part2/diagonolOut.txt"));
+  public static void diagonal(int n)throws IOException{
     int intCount = 0;
     int intCount1 = 0;
     int[][] intArray;
     intArray = new int[n][n];
-    while(intCount < n && intCount1 < n){
-      intCount++;
-      intCount1++;
-      if(intCount1 < n - intCount - 1){
-        intArray[intCount][intCount1] = "0,";
-      }else if(intCount1 == n - intCount - 1 && intCount == 1){
-        intArray[intCount][intCount1] = "1";
-      }else if(intCount1 == n - intCount - 1){
-        intArray[intCount][intCount1] = "1,";
-      }else if(intCount1 > n - intCount - 1){
-        intArray[intCount][intCount1] = "2,";
+    try{
+    PrintWriter theWriter = new PrintWriter(new FileWriter("src/gr11review/part2/diagonalOut.txt"));
+    for(intCount = 0; intCount < n; intCount++){
+      for(intCount1 = 0; intCount1 < n; intCount1++){
+        //intArray[intCount][intCount1] = 0;
+        if(intCount1 == (n - intCount - 1)){
+          intArray[intCount][intCount1] = 1;
+        }else if(intCount1 > (n - intCount - 1)){
+          intArray[intCount][intCount1] = 2;
+       }else if(intCount1 < n - intCount - 1){
+          intArray[intCount][intCount1] = 0;
+        }
+        
+        theWriter.print(intArray[intCount][intCount1]);
       }
     }
-    theWriter.print(intArray[intCount][intCount2]);
     theWriter.close();
+    }catch(IOException e){
+      System.out.println("Error");
+    }
   }
 }
