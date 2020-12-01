@@ -144,6 +144,7 @@ public class Utility {
       //Printing to text file
       for (introwcounter = 0; introwcounter < i; introwcounter++) {
         for (intcoloumncounter = 0; intcoloumncounter < j; intcoloumncounter++) {
+
           theout.print(intanswerarray[introwcounter][intcoloumncounter] + ",");
         }
         theout.println("");
