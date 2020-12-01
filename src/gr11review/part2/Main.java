@@ -1,6 +1,6 @@
 package gr11review.part2;
 
-import gr11review.part2.Utility. * ;
+import gr11review.part2.Utility.*;
 import java.util.Arrays;
 
 public class Main {
