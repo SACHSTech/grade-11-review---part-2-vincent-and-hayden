@@ -1,6 +1,6 @@
 package gr11review.part2;
 
-import java.io.*;
+import java.io. * ;
 import java.util.Arrays;
 
 //@author Vincent Hung & Hayden Chung
@@ -17,8 +17,7 @@ public class Utility {
     for (intcounter = 0; intcounter < intlength; intcounter++) {
       stranswer = stranswer + str.substring(intcounter, intcounter + 1);
       if (intcounter > 0) {
-        if (str.charAt(intcounter - 1) == 'z' && str.charAt(intcounter + 1) == 'p')
-          stranswer = stranswer.substring(0, stranswer.length() - 1);
+        if (str.charAt(intcounter - 1) == 'z' && str.charAt(intcounter + 1) == 'p') stranswer = stranswer.substring(0, stranswer.length() - 1);
       }
     }
     return stranswer;
@@ -47,9 +46,9 @@ public class Utility {
           stranswer = strreader;
         }
       }
-    thefile.close();
-    //If Exception print error
-    } catch (IOException e) {
+      thefile.close();
+      //If Exception print error
+    } catch(IOException e) {
 
       System.out.println("error");
 
@@ -65,7 +64,7 @@ public class Utility {
     int intprinter = 0;
     intlength = nums.length;
     //loop to scan and change array
-    for (intcounter = 0 ; intcounter < intlength ; intcounter++) {
+    for (intcounter = 0; intcounter < intlength; intcounter++) {
       //Check if number is divisible by 10
       if ((nums[intcounter] % 10) == 0) {
         //set printer variable to current number
@@ -77,7 +76,7 @@ public class Utility {
         nums[intcounter] = intprinter;
       }
     }
-   return nums;
+    return nums;
   }
 
   //@author Vincent Hung
@@ -93,7 +92,7 @@ public class Utility {
     intouterlength = outer.length;
     //System.out.println(intouterlength);
     //For loop until entire inner array has been checked
-    for (intinnercounter = 0 ; intinnercounter < intinnerlength ; intoutercounter++) {
+    for (intinnercounter = 0; intinnercounter < intinnerlength; intoutercounter++) {
       //System.out.println(intoutercounter);
       //System.out.println(intinnercounter);
       //If outercounter still inside outer array
@@ -102,7 +101,7 @@ public class Utility {
         //set innercounter to innerlength to skip everything else
         if (outer[intoutercounter] > inner[intinnercounter]) {
           intinnercounter = intinnerlength;
-        //if match found add to confirmation and mover to next inner
+          //if match found add to confirmation and mover to next inner
         } else if (outer[intoutercounter] == inner[intinnercounter]) {
           intconfirmation++;
           intinnercounter++;
@@ -112,14 +111,14 @@ public class Utility {
     //if all inner array numbers have a match
     if (intconfirmation == intinnerlength) {
       return true;
-    } else { 
+    } else {
       //System.out.println(intoutercounter);
       return false;
     }
   }
 
   //@author Vincent Hung
-  public static void pascalTri(int i, int j){
+  public static void pascalTri(int i, int j) {
     //Variable Declartion
     int[][] intanswerarray = new int[i][j];
     int introwcounter;
@@ -128,31 +127,31 @@ public class Utility {
     try {
       PrintWriter theout = new PrintWriter(new FileWriter("/home/runner/grade-11-review-part-2-vincent-and-hayden/src/gr11review/part2/pascal.txt"));
       //Printing 1 along left and top side to array(they are independant from variables)
-      for (introwcounter = 0 ; introwcounter < i ; introwcounter++) {
+      for (introwcounter = 0; introwcounter < i; introwcounter++) {
         intanswerarray[introwcounter][0] = 1;
       }
-      for (intcoloumncounter = 0 ; intcoloumncounter < j ; intcoloumncounter++) {
+      for (intcoloumncounter = 0; intcoloumncounter < j; intcoloumncounter++) {
         intanswerarray[0][intcoloumncounter] = 1;
       }
       //applying pascal pattern to other spaces in array
       //directly left and directly above the number are the two numbers to add to create new numbers
       //start at 1 for both row and coloumn in array since 0 row and coloumn already filled
-      for (introwcounter = 1 ; introwcounter < i ; introwcounter++) {
-        for (intcoloumncounter = 1 ; intcoloumncounter < j ; intcoloumncounter++) {
+      for (introwcounter = 1; introwcounter < i; introwcounter++) {
+        for (intcoloumncounter = 1; intcoloumncounter < j; intcoloumncounter++) {
           intanswerarray[introwcounter][intcoloumncounter] = intanswerarray[introwcounter - 1][intcoloumncounter] + intanswerarray[introwcounter][intcoloumncounter - 1];
         }
       }
       //Printing to text file
-      for (introwcounter = 0 ; introwcounter < i ; introwcounter++) {
-        for (intcoloumncounter = 0 ; intcoloumncounter < j ; intcoloumncounter++) {
-          theout.print(intanswerarray[introwcounter][intcoloumncounter] + ", ");
+      for (introwcounter = 0; introwcounter < i; introwcounter++) {
+        for (intcoloumncounter = 0; intcoloumncounter < j; intcoloumncounter++) {
+          theout.print(intanswerarray[introwcounter][intcoloumncounter] + ",");
         }
         theout.println("");
       }
       //closing text file
       theout.close();
-    //If exception caught print out "error"
-    } catch (IOException e) {
+      //If exception caught print out "error"
+    } catch(IOException e) {
 
       System.out.println("error");
 
